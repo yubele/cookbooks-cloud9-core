@@ -1,0 +1,11 @@
+node.default[:cloud9_core][:packages] = ["nodejs"]
+node.default[:cloud9_core][:exec_user] = "ubuntu"
+node.default[:cloud9_core][:install_dir] = "/home/#{node[:cloud9_core][:exec_user]}/cloud9-core"
+node.default[:cloud9_core][:pid_path] = "/home/#{node[:cloud9_core][:exec_user]}/cloud9-core.pid"
+node.default[:cloud9_core][:log_path] = "/home/#{node[:cloud9_core][:exec_user]}/cloud9-core.log"
+node.default[:cloud9_core][:git_repository] = "https://github.com/c9/core.git"
+node.default[:cloud9_core][:git_revision] = "master"
+node.default[:cloud9_core][:port] = 10000
+node.default[:cloud9_core][:auth][:user] = "user"
+node.default[:cloud9_core][:auth][:password] = "password"
+node.default[:cloud9_core][:workspace] = "/home/#{node[:cloud9_core][:exec_user]}/workspace"
