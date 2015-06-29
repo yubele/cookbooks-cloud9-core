@@ -9,3 +9,4 @@ node.default[:cloud9_core][:port] = 10000
 node.default[:cloud9_core][:auth][:user] = "user"
 node.default[:cloud9_core][:auth][:password] = "password"
 node.default[:cloud9_core][:workspace] = "/home/#{node[:cloud9_core][:exec_user]}/workspace"
+node.default[:cloud9_core][:server_name] = "cloud9.local"
