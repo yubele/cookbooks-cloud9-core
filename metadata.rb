@@ -1,0 +1,7 @@
+name             'cloud9-core'
+maintainer       'yusuke@newsdict.net'
+maintainer_email 'yusuke@newsdict.net'
+license          'All rights reserved'
+description      'Installs/Configures base'
+long_description 'Installs/Configures base'
+version          '0.1.0'
