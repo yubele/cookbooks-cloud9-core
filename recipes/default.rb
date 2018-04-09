@@ -7,7 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-ppa "chris-lea/node.js"
+#ppa "chris-lea/node.js"
+Chef::Resource::User.send(:include, Chef::Mixin)
 
 node[:cloud9_core][:packages].each do |pkg|
   package pkg do
@@ -46,7 +47,7 @@ end
 
 service "cloud9" do
   supports :restart => true, :reload => true
-  action [:enable, :start, :reload]
+  action [:enable, :start]
 end
 
 directory node[:cloud9_core][:workspace] do
