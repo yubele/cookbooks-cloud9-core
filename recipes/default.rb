@@ -45,10 +45,6 @@ template "/etc/init.d/cloud9" do
   mode '755'
 end
 
-service "cloud9" do
-  supports :restart => true, :reload => true
-  action [:enable, :start]
-end
 
 directory node[:cloud9_core][:workspace] do
   user node[:cloud9_core][:exec_user]
@@ -82,6 +78,11 @@ execute "Enable a config" do
   user 'root'
   group 'root'
   action :run
+end
+
+service "cloud9" do
+  supports :restart => true, :reload => true
+  action [:enable, :start]
 end
 
 service 'nginx' do
